@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bwqchtktcxvhu"]
+
+[ext_resource type="Script" uid="uid://43x5kdudkshj" path="res://minigame_timer.gd" id="1_5t6oo"]
+
+[node name="MinigameTimer" type="Node2D" unique_id=2030773464]
+script = ExtResource("1_5t6oo")
+
+[node name="TIMER" type="Label" parent="." unique_id=1716541971]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(2.021005, 3.219515)
+text = "Timer: 0.0 (test)"
