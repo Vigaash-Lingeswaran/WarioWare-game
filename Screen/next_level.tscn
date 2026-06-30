@@ -1,3 +1,60 @@
 [gd_scene format=3 uid="uid://bv4bnefxpis56"]
 
-[node name="Node2D" type="Node2D" unique_id=1305991898]
+[ext_resource type="Script" uid="uid://c4mrb81et6mx6" path="res://Screen/next_level.gd" id="1_j2ojn"]
+[ext_resource type="Texture2D" uid="uid://bn45big1jbd38" path="res://wario_wallpaper_by_benowar88_d9d5x5d-fullview.png" id="1_s6f0y"]
+[ext_resource type="Texture2D" uid="uid://djy3n5a7tihmf" path="res://garlic-color.png" id="2_mwci6"]
+[ext_resource type="Script" uid="uid://blm7hwnsqwvle" path="res://Screen/timer.gd" id="4_u88ix"]
+
+[node name="First_Level_scene" type="Node2D" unique_id=1305991898]
+script = ExtResource("1_j2ojn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1729893229]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.1272175, 1.1209872)
+texture = ExtResource("1_s6f0y")
+
+[node name="Live_count" type="HBoxContainer" parent="." unique_id=425309572]
+offset_left = 71.0
+offset_right = 4087.0
+offset_bottom = 800.0
+scale = Vector2(0.2567002, 0.23463783)
+
+[node name="LIVE" type="TextureRect" parent="Live_count" unique_id=196887958]
+layout_mode = 2
+texture = ExtResource("2_mwci6")
+
+[node name="LIVE2" type="TextureRect" parent="Live_count" unique_id=230108347]
+layout_mode = 2
+texture = ExtResource("2_mwci6")
+
+[node name="LIVE3" type="TextureRect" parent="Live_count" unique_id=392344368]
+layout_mode = 2
+texture = ExtResource("2_mwci6")
+
+[node name="LIVE4" type="TextureRect" parent="Live_count" unique_id=162140204]
+layout_mode = 2
+texture = ExtResource("2_mwci6")
+
+[node name="LIVE5" type="TextureRect" parent="Live_count" unique_id=44743186]
+layout_mode = 2
+texture = ExtResource("2_mwci6")
+
+[node name="LEVEL" type="Label" parent="." unique_id=1590204672]
+offset_left = 428.0
+offset_top = 451.00003
+offset_right = 564.0
+offset_bottom = 506.00003
+scale = Vector2(1.9224997, 1.5413923)
+theme_override_font_sizes/font_size = 35
+text = "Level #"
+
+[node name="TIMER" type="Label" parent="." unique_id=1692625204]
+offset_left = 535.0
+offset_top = 536.0
+offset_right = 592.0
+offset_bottom = 591.0
+scale = Vector2(1.2874608, 1.1172597)
+theme_override_font_sizes/font_size = 40
+text = "0.0"
+script = ExtResource("4_u88ix")
