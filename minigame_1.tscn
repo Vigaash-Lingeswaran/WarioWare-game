@@ -2,10 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://dq20scwhw5u57" path="res://hqdefault.jpg" id="1_0hvi2"]
 [ext_resource type="Texture2D" uid="uid://coyhfht1tsguv" path="res://cw33weoivly41.png" id="1_2n61g"]
+[ext_resource type="Script" uid="uid://c2p26vet30x03" path="res://minigame_1.gd" id="1_s0dnv"]
 [ext_resource type="Texture2D" uid="uid://b5m6xi6ecy0jp" path="res://canva-pixelated-cloud-game-icon-MACiZ8yXnZw.png" id="2_gi7k6"]
+[ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="3_vlki2"]
 [ext_resource type="Texture2D" uid="uid://bgvdsn8k8jkcw" path="res://hqdefault (1).jpg" id="4_r6gmb"]
 [ext_resource type="PackedScene" uid="uid://caknvmky5u8ws" path="res://Screen/player.tscn" id="5_wh6qq"]
 [ext_resource type="Texture2D" uid="uid://5uann1ripcyw" path="res://Screen/3716883680234cb.png" id="6_or1ld"]
+[ext_resource type="Script" uid="uid://ch2tntfnuiamr" path="res://coin.gd" id="7_vlki2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7lg2"]
 size = Vector2(678.55, 6.3825045)
@@ -22,21 +25,60 @@ size = Vector2(925.6129, 48.449585)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrunk"]
 size = Vector2(275.41193, 27.606537)
 
+[sub_resource type="Animation" id="Animation_or1ld"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1088, 499), Vector2(1088, 485)]
+}
+
 [sub_resource type="Animation" id="Animation_jife1"]
 resource_name = "floating"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1088, 499), Vector2(1088, 494)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s0dnv"]
 _data = {
+&"RESET": SubResource("Animation_or1ld"),
 &"floating": SubResource("Animation_jife1")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_d7lg2"]
+radius = 727.0079
+
 [node name="MINIGAME 1" type="Node2D" unique_id=161522062]
+script = ExtResource("1_s0dnv")
 
 [node name="BACKGROUND" type="TextureRect" parent="." unique_id=668856410]
 offset_right = 521.0
 offset_bottom = 322.0
 scale = Vector2(2.2122333, 1.995012)
 texture = ExtResource("1_0hvi2")
+
+[node name="MinigameTimer" parent="BACKGROUND" unique_id=2030773464 instance=ExtResource("3_vlki2")]
+position = Vector2(227.82408, 249.12132)
+scale = Vector2(0.4520319, 0.5012501)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=855073802]
 scroll_offset = Vector2(-71, -50)
@@ -150,6 +192,7 @@ shape = SubResource("RectangleShape2D_vrunk")
 position = Vector2(115, 449)
 
 [node name="Coin" type="Node2D" parent="." unique_id=839937158]
+script = ExtResource("7_vlki2")
 
 [node name="Coin" type="TextureRect" parent="Coin" unique_id=262460666]
 offset_left = 1088.0
@@ -162,3 +205,62 @@ texture = ExtResource("6_or1ld")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Coin" unique_id=1134716480]
 root_node = NodePath("../Coin")
 libraries/ = SubResource("AnimationLibrary_s0dnv")
+
+[node name="Area2D" type="Area2D" parent="Coin" unique_id=1608549551]
+position = Vector2(1088, 497.03552)
+scale = Vector2(0.048165064, 0.044986345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin/Area2D" unique_id=1248965213]
+position = Vector2(602.0961, 532.70557)
+shape = SubResource("CircleShape2D_d7lg2")
+
+[node name="Coin2" type="Node2D" parent="." unique_id=837590492]
+position = Vector2(-71, -288)
+script = ExtResource("7_vlki2")
+
+[node name="Coin" type="TextureRect" parent="Coin2" unique_id=1031043181]
+offset_left = 1088.0
+offset_top = 499.0
+offset_right = 2276.0
+offset_bottom = 1687.0
+scale = Vector2(0.048165064, 0.044986345)
+texture = ExtResource("6_or1ld")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Coin2" unique_id=810499620]
+root_node = NodePath("../Coin")
+libraries/ = SubResource("AnimationLibrary_s0dnv")
+
+[node name="Area2D" type="Area2D" parent="Coin2" unique_id=306681849]
+position = Vector2(1088, 497.03552)
+scale = Vector2(0.048165064, 0.044986345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin2/Area2D" unique_id=23609864]
+position = Vector2(602.0961, 532.70557)
+shape = SubResource("CircleShape2D_d7lg2")
+
+[node name="Coin3" type="Node2D" parent="." unique_id=386114230]
+position = Vector2(-900, -424)
+script = ExtResource("7_vlki2")
+
+[node name="Coin" type="TextureRect" parent="Coin3" unique_id=48339322]
+offset_left = 1088.0
+offset_top = 499.0
+offset_right = 2276.0
+offset_bottom = 1687.0
+scale = Vector2(0.048165064, 0.044986345)
+texture = ExtResource("6_or1ld")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Coin3" unique_id=930572817]
+root_node = NodePath("../Coin")
+libraries/ = SubResource("AnimationLibrary_s0dnv")
+
+[node name="Area2D" type="Area2D" parent="Coin3" unique_id=112209797]
+position = Vector2(1088, 497.03552)
+scale = Vector2(0.048165064, 0.044986345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin3/Area2D" unique_id=413201867]
+position = Vector2(602.0961, 532.70557)
+shape = SubResource("CircleShape2D_d7lg2")
+
+[connection signal="coin_collected" from="Coin" to="." method="coin_collect"]
+[connection signal="coin_collected" from="Coin2" to="." method="_on_coin_2_coin_collected"]

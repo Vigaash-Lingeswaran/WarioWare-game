@@ -8,5 +8,8 @@ script = ExtResource("1_5t6oo")
 [node name="TIMER" type="Label" parent="." unique_id=1716541971]
 offset_right = 40.0
 offset_bottom = 23.0
-scale = Vector2(2.021005, 3.219515)
-text = "Timer: 0.0 (test)"
+scale = Vector2(2.021005, 2.5675316)
+theme_override_colors/font_color = Color(0.44705883, 0.11372549, 0.59607846, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Timer: 0.0 "

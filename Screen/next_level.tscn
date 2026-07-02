@@ -47,7 +47,7 @@ offset_right = 564.0
 offset_bottom = 506.00003
 scale = Vector2(1.9224997, 1.5413923)
 theme_override_font_sizes/font_size = 35
-text = "Level #"
+text = "Level # "
 
 [node name="TIMER" type="Label" parent="." unique_id=1692625204]
 offset_left = 535.0
