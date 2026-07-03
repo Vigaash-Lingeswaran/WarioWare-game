@@ -14,7 +14,7 @@ func Timer(start_time: float):
 	
 	time = start_time
 	
-	while time>0.0:
+	while time>0.10:
 		await wait (0.10)
 		time = time-0.10
 		

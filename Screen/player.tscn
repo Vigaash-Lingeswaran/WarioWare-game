@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dnh3idwmac0l2" path="res://3bc1c2faa4b1d71b83a591fb33f1c60b.png" id="1_k2c4k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d7lg2"]
-radius = 57.035076
+radius = 55.7315
 
 [node name="PLAYER" type="CharacterBody2D" unique_id=622741999]
 script = ExtResource("1_124gb")
@@ -14,4 +14,9 @@ scale = Vector2(0.18345341, 0.1771833)
 texture = ExtResource("1_k2c4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=228612490]
+shape = SubResource("CircleShape2D_d7lg2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=633516285]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=707282165]
 shape = SubResource("CircleShape2D_d7lg2")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bwqchtktcxvhu"]
 
-[ext_resource type="Script" uid="uid://43x5kdudkshj" path="res://minigame_timer.gd" id="1_5t6oo"]
+[ext_resource type="Script" uid="uid://43x5kdudkshj" path="res://Screen/minigame_timer.gd" id="1_5t6oo"]
 
 [node name="MinigameTimer" type="Node2D" unique_id=2030773464]
 script = ExtResource("1_5t6oo")
@@ -10,6 +10,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 scale = Vector2(2.021005, 2.5675316)
 theme_override_colors/font_color = Color(0.44705883, 0.11372549, 0.59607846, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.99, 0.99, 0.99, 1)
 theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
 text = "Timer: 0.0 "

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cbmx2fev8uepf"]
+
+[ext_resource type="Texture2D" uid="uid://dcca4uqn8jtuv" path="res://Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation.png" id="1_um2t3"]
+[ext_resource type="Texture2D" uid="uid://dls5v88w3n27" path="res://Screen/146805.png" id="2_0vdvy"]
+[ext_resource type="Script" uid="uid://tfrhfl6mkpfu" path="res://Screen/texture_button.gd" id="3_kv4by"]
+
+[node name="WINNER Theme" type="Node2D" unique_id=469785460]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1902447678]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5992421, 0.60161734)
+texture = ExtResource("1_um2t3")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1493243139]
+offset_left = 414.00003
+offset_top = 263.0
+offset_right = 926.0001
+offset_bottom = 775.0
+scale = Vector2(0.7107759, 0.6417322)
+texture_normal = ExtResource("2_0vdvy")
+script = ExtResource("3_kv4by")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

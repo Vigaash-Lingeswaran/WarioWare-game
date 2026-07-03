@@ -1,0 +1,314 @@
+[gd_scene format=3 uid="uid://vbwds8lnm3um"]
+
+[ext_resource type="Texture2D" uid="uid://dq20scwhw5u57" path="res://hqdefault.jpg" id="2_b8tye"]
+[ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="3_hun8f"]
+[ext_resource type="Texture2D" uid="uid://coyhfht1tsguv" path="res://cw33weoivly41.png" id="4_al7iw"]
+[ext_resource type="Texture2D" uid="uid://b5m6xi6ecy0jp" path="res://canva-pixelated-cloud-game-icon-MACiZ8yXnZw.png" id="5_0up7u"]
+[ext_resource type="Texture2D" uid="uid://bgvdsn8k8jkcw" path="res://hqdefault (1).jpg" id="6_7n05b"]
+[ext_resource type="PackedScene" uid="uid://caknvmky5u8ws" path="res://Screen/player.tscn" id="7_s1inc"]
+[ext_resource type="Script" uid="uid://ch2tntfnuiamr" path="res://Screen/coin.gd" id="8_3okua"]
+[ext_resource type="Texture2D" uid="uid://5uann1ripcyw" path="res://Screen/3716883680234cb.png" id="9_kfbj8"]
+
+[sub_resource type="GDScript" id="GDScript_c531g"]
+script/source = "extends Node2D
+
+@onready var themed_timer: Node2D = $BACKGROUND/MinigameTimer
+
+
+var coin_collected = 0
+var timer_end = false
+
+func _ready() ->void:
+	
+	await themed_timer.Timer(10.0)
+	timer_end = true
+
+func _process(delta: float) -> void:
+	if coin_collected ==3:
+		if Global.minigames_done >5:
+			get_tree().change_scene_to_file (\"res://Screen/winner_theme.tscn\")
+			
+		else:
+			get_tree().change_scene_to_file(\"res://Screen/next_level.tscn\")
+
+func coin_collect()-> void:
+	coin_collected = coin_collected +1
+	return
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7lg2"]
+size = Vector2(678.55, 6.3825045)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rm4ur"]
+size = Vector2(15.224352, 11.005646)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjc4y"]
+size = Vector2(433.1786, 44.074383)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bbt4"]
+size = Vector2(925.6129, 48.449585)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrunk"]
+size = Vector2(275.41193, 27.606537)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idrje"]
+size = Vector2(664.5, 190)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2378"]
+size = Vector2(775.75, 141.5)
+
+[sub_resource type="Animation" id="Animation_or1ld"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1088, 499), Vector2(1088, 485)]
+}
+
+[sub_resource type="Animation" id="Animation_jife1"]
+resource_name = "floating"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1088, 499), Vector2(1088, 494)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s0dnv"]
+_data = {
+&"RESET": SubResource("Animation_or1ld"),
+&"floating": SubResource("Animation_jife1")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d7lg2"]
+radius = 727.0079
+
+[node name="MARIO (MINIGAME 1)" type="Node2D" unique_id=161522062]
+script = SubResource("GDScript_c531g")
+
+[node name="BACKGROUND" type="TextureRect" parent="." unique_id=668856410]
+offset_right = 521.0
+offset_bottom = 322.0
+scale = Vector2(2.2122333, 1.995012)
+texture = ExtResource("2_b8tye")
+
+[node name="MinigameTimer" parent="BACKGROUND" unique_id=2030773464 instance=ExtResource("3_hun8f")]
+position = Vector2(227.82408, 249.12132)
+scale = Vector2(0.4520319, 0.5012501)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=855073802]
+scroll_offset = Vector2(-71, -50)
+repeat_size = Vector2(1500, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=1533766800]
+offset_left = 227.0
+offset_top = 77.0
+offset_right = 533.0
+offset_bottom = 425.0
+scale = Vector2(-0.39272225, 0.32761934)
+texture = ExtResource("4_al7iw")
+
+[node name="TextureRect2" type="TextureRect" parent="Parallax2D" unique_id=1273953647]
+offset_left = 703.0
+offset_top = 72.000015
+offset_right = 1253.0
+offset_bottom = 420.0
+scale = Vector2(-0.5043151, 0.2617154)
+texture = ExtResource("5_0up7u")
+
+[node name="TextureRect3" type="TextureRect" parent="Parallax2D" unique_id=917178549]
+offset_left = 1145.0
+offset_top = 145.0
+offset_right = 1695.0
+offset_bottom = 493.0
+scale = Vector2(-0.40148732, 0.20765704)
+texture = ExtResource("5_0up7u")
+
+[node name="Platform 1" type="StaticBody2D" parent="." unique_id=1166513598]
+
+[node name="TextureRect" type="TextureRect" parent="Platform 1" unique_id=948453851]
+visible = false
+offset_top = 556.0
+offset_right = 40.0
+offset_bottom = 596.0
+scale = Vector2(2.4010677, 2.1982684)
+texture = ExtResource("6_7n05b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 1" unique_id=810409557]
+position = Vector2(575, 601.5)
+scale = Vector2(1.6947904, 13.631021)
+shape = SubResource("RectangleShape2D_d7lg2")
+
+[node name="Platform 2" type="StaticBody2D" parent="." unique_id=935429599]
+
+[node name="TextureRect" type="TextureRect" parent="Platform 2" unique_id=404615369]
+offset_left = 291.0
+offset_top = 431.00003
+offset_right = 771.0
+offset_bottom = 471.00003
+scale = Vector2(1.6195949, 1.2622172)
+texture = ExtResource("6_7n05b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 2" unique_id=186656264]
+position = Vector2(682.5, 457.5)
+scale = Vector2(50.642555, -4.452263)
+shape = SubResource("RectangleShape2D_rm4ur")
+
+[node name="Platform 3" type="StaticBody2D" parent="." unique_id=120240221]
+
+[node name="TextureRect" type="TextureRect" parent="Platform 3" unique_id=1459146610]
+offset_left = 597.0
+offset_top = 268.00003
+offset_right = 1077.0
+offset_bottom = 308.00003
+scale = Vector2(1.1548266, 1.2196451)
+texture = ExtResource("6_7n05b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 3" unique_id=1824500178]
+position = Vector2(872.50006, 292.875)
+scale = Vector2(1.271993, 1.0947403)
+shape = SubResource("RectangleShape2D_pjc4y")
+
+[node name="Platform 4" type="StaticBody2D" parent="." unique_id=1037162103]
+position = Vector2(-382, -131)
+
+[node name="TextureRect" type="TextureRect" parent="Platform 4" unique_id=1441507667]
+offset_left = 382.00006
+offset_top = 267.00003
+offset_right = 862.00006
+offset_bottom = 307.00003
+scale = Vector2(0.65598303, 0.95231366)
+texture = ExtResource("6_7n05b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 4" unique_id=449462545]
+position = Vector2(544.5, 287.5)
+scale = Vector2(0.3403151, 0.88752055)
+shape = SubResource("RectangleShape2D_5bbt4")
+
+[node name="Platform 5" type="StaticBody2D" parent="." unique_id=1436907413]
+position = Vector2(-382, -131)
+
+[node name="TextureRect" type="TextureRect" parent="Platform 5" unique_id=178314912]
+offset_left = 978.99994
+offset_top = 399.0
+offset_right = 1459.0
+offset_bottom = 439.0
+rotation = -1.5707964
+scale = Vector2(0.06114437, 0.2975986)
+texture = ExtResource("6_7n05b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 5" unique_id=218512631]
+position = Vector2(985.5, 384.5)
+rotation = -1.5707964
+scale = Vector2(0.105296835, 0.47090206)
+shape = SubResource("RectangleShape2D_vrunk")
+
+[node name="Border" type="StaticBody2D" parent="." unique_id=599897169]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border" unique_id=482550607]
+position = Vector2(-93, 293)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_idrje")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border" unique_id=1167487853]
+position = Vector2(1241, 268)
+rotation = -1.5707964
+scale = Vector2(1.0300536, 0.65502834)
+shape = SubResource("RectangleShape2D_a2378")
+
+[node name="PLAYER" parent="." unique_id=622741999 instance=ExtResource("7_s1inc")]
+position = Vector2(86, 499)
+
+[node name="Coin" type="Node2D" parent="." unique_id=839937158]
+script = ExtResource("8_3okua")
+
+[node name="Coin" type="TextureRect" parent="Coin" unique_id=262460666]
+offset_left = 1088.0
+offset_top = 499.0
+offset_right = 2276.0
+offset_bottom = 1687.0
+scale = Vector2(0.048165064, 0.044986345)
+texture = ExtResource("9_kfbj8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Coin" unique_id=1134716480]
+root_node = NodePath("../Coin")
+libraries/ = SubResource("AnimationLibrary_s0dnv")
+autoplay = &"RESET"
+
+[node name="Area2D" type="Area2D" parent="Coin" unique_id=1608549551]
+position = Vector2(1088, 497.03552)
+scale = Vector2(0.048165064, 0.044986345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin/Area2D" unique_id=1248965213]
+position = Vector2(602.0961, 532.70557)
+shape = SubResource("CircleShape2D_d7lg2")
+
+[node name="Coin2" type="Node2D" parent="." unique_id=837590492]
+position = Vector2(-71, -288)
+script = ExtResource("8_3okua")
+
+[node name="Coin" type="TextureRect" parent="Coin2" unique_id=1031043181]
+offset_left = 1088.0
+offset_top = 499.0
+offset_right = 2276.0
+offset_bottom = 1687.0
+scale = Vector2(0.048165064, 0.044986345)
+texture = ExtResource("9_kfbj8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Coin2" unique_id=810499620]
+root_node = NodePath("../Coin")
+libraries/ = SubResource("AnimationLibrary_s0dnv")
+autoplay = &"RESET"
+
+[node name="Area2D" type="Area2D" parent="Coin2" unique_id=306681849]
+position = Vector2(1088, 497.03552)
+scale = Vector2(0.048165064, 0.044986345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin2/Area2D" unique_id=23609864]
+position = Vector2(602.0961, 532.70557)
+shape = SubResource("CircleShape2D_d7lg2")
+
+[node name="Coin3" type="Node2D" parent="." unique_id=386114230]
+position = Vector2(-900, -424)
+script = ExtResource("8_3okua")
+
+[node name="Coin" type="TextureRect" parent="Coin3" unique_id=48339322]
+offset_left = 1088.0
+offset_top = 499.0
+offset_right = 2276.0
+offset_bottom = 1687.0
+scale = Vector2(0.048165064, 0.044986345)
+texture = ExtResource("9_kfbj8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Coin3" unique_id=930572817]
+root_node = NodePath("../Coin")
+libraries/ = SubResource("AnimationLibrary_s0dnv")
+
+[node name="Area2D" type="Area2D" parent="Coin3" unique_id=112209797]
+position = Vector2(1088, 497.03552)
+scale = Vector2(0.048165064, 0.044986345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin3/Area2D" unique_id=413201867]
+position = Vector2(602.0961, 532.70557)
+shape = SubResource("CircleShape2D_d7lg2")
+
+[connection signal="coin_collected" from="Coin" to="." method="coin_collect"]
+[connection signal="coin_collected" from="Coin2" to="." method="_on_coin_2_coin_collected"]
+[connection signal="coin_collected" from="Coin3" to="." method="coin_collect"]

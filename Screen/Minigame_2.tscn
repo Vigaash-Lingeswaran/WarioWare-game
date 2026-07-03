@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://rxqbnb70wyxs"]
+
+[ext_resource type="Script" uid="uid://dp2d03kshrylc" path="res://Screen/minigame_2.gd" id="1_f4ahv"]
+[ext_resource type="Texture2D" uid="uid://b1ccm5u6ec7x4" path="res://3ZW51.jpeg" id="1_wwk08"]
+[ext_resource type="Texture2D" uid="uid://h6dd28trf7m1" path="res://Screen/Mario-Star-PNG-Photo.png" id="2_vs36o"]
+[ext_resource type="Script" uid="uid://blhkuu36wcpa6" path="res://Screen/coin_1.gd" id="4_duxer"]
+[ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="5_2pc3k"]
+
+[sub_resource type="Animation" id="Animation_wwk08"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BACKGROUND:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.8146973e-06, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BACKGROUND2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1150, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vs36o"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BACKGROUND:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3.8146973e-06, 0), Vector2(1150, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BACKGROUND2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1150, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5heya"]
+_data = {
+&"RESET": SubResource("Animation_wwk08"),
+&"new_animation": SubResource("Animation_vs36o")
+}
+
+[node name="Clicker (MINIGAME 2)" type="Node2D" unique_id=1857421138]
+script = ExtResource("1_f4ahv")
+
+[node name="BACKGROUND" type="TextureRect" parent="." unique_id=507687902]
+offset_right = 39.996887
+offset_bottom = 40.00003
+scale = Vector2(28.827787, 16.372774)
+texture = ExtResource("1_wwk08")
+expand_mode = 1
+
+[node name="BACKGROUND2" type="TextureRect" parent="." unique_id=1575252897]
+offset_left = -1150.0
+offset_right = -1110.0011
+offset_bottom = 40.00003
+scale = Vector2(28.827787, 16.372774)
+texture = ExtResource("1_wwk08")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1517745195]
+libraries/ = SubResource("AnimationLibrary_5heya")
+autoplay = &"new_animation"
+
+[node name="Coin 1" type="Button" parent="." unique_id=1798362850]
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.059613984, 0.059903078)
+theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
+icon = ExtResource("2_vs36o")
+flat = true
+script = ExtResource("4_duxer")
+
+[node name="Coin 2" type="Button" parent="." unique_id=1433975467]
+offset_left = 386.0
+offset_top = 95.99999
+offset_right = 3859.0
+offset_bottom = 2480.0
+scale = Vector2(0.059613984, 0.059903078)
+theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
+icon = ExtResource("2_vs36o")
+flat = true
+script = ExtResource("4_duxer")
+
+[node name="Coin 3" type="Button" parent="." unique_id=893392913]
+offset_left = 207.0
+offset_top = 458.0
+offset_right = 3680.0
+offset_bottom = 2842.0
+scale = Vector2(0.059613984, 0.059903078)
+theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
+icon = ExtResource("2_vs36o")
+flat = true
+script = ExtResource("4_duxer")
+
+[node name="Coin 4" type="Button" parent="." unique_id=1515672642]
+offset_left = 879.0
+offset_top = 239.0
+offset_right = 4352.0
+offset_bottom = 2623.0
+scale = Vector2(0.059613984, 0.059903078)
+theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
+icon = ExtResource("2_vs36o")
+flat = true
+script = ExtResource("4_duxer")
+
+[node name="Coin 5" type="Button" parent="." unique_id=867869121]
+offset_left = 769.0
+offset_top = 458.0
+offset_right = 4242.0
+offset_bottom = 2842.0
+scale = Vector2(0.059613984, 0.059903078)
+theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
+icon = ExtResource("2_vs36o")
+flat = true
+script = ExtResource("4_duxer")
+
+[node name="MinigameTimer" parent="." unique_id=2030773464 instance=ExtResource("5_2pc3k")]
+position = Vector2(879, 39)
+
+[connection signal="pressed" from="Coin 1" to="Coin 1" method="_on_pressed"]
+[connection signal="pressed" from="Coin 2" to="." method="_on_coin_2_pressed"]
+[connection signal="pressed" from="Coin 2" to="Coin 2" method="_on_pressed"]
+[connection signal="pressed" from="Coin 3" to="Coin 3" method="_on_pressed"]
+[connection signal="pressed" from="Coin 4" to="Coin 4" method="_on_pressed"]
+[connection signal="pressed" from="Coin 5" to="Coin 5" method="_on_pressed"]

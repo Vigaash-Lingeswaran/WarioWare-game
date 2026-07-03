@@ -8,7 +8,7 @@ signal coin_collected
 
 func _process(delta: float) -> void:
 	
-	if player_area.overlap_area(self_area):
+	if player_area.overlaps_area(self_area):
 		if self.visible:
 			emit_signal("coin_collected")
 			self.hide()
