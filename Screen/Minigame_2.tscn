@@ -72,7 +72,7 @@ _data = {
 script = ExtResource("1_f4ahv")
 
 [node name="BACKGROUND" type="TextureRect" parent="." unique_id=507687902]
-offset_right = 39.996887
+offset_right = 39.99689
 offset_bottom = 40.00003
 scale = Vector2(28.827787, 16.372774)
 texture = ExtResource("1_wwk08")
@@ -85,6 +85,18 @@ offset_bottom = 40.00003
 scale = Vector2(28.827787, 16.372774)
 texture = ExtResource("1_wwk08")
 expand_mode = 1
+
+[node name="TextEdit" type="Label" parent="." unique_id=714393343]
+offset_left = 879.0
+offset_top = 143.0
+offset_right = 1402.0
+offset_bottom = 239.0
+scale = Vector2(0.46068966, 0.6916076)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0.3162401, 0.18759999, 0.67, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 70
+text = "TAP THE STARS!"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1517745195]
 libraries/ = SubResource("AnimationLibrary_5heya")
@@ -111,9 +123,9 @@ flat = true
 script = ExtResource("4_duxer")
 
 [node name="Coin 3" type="Button" parent="." unique_id=893392913]
-offset_left = 207.0
+offset_left = 60.0
 offset_top = 458.0
-offset_right = 3680.0
+offset_right = 3533.0
 offset_bottom = 2842.0
 scale = Vector2(0.059613984, 0.059903078)
 theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
@@ -143,6 +155,39 @@ icon = ExtResource("2_vs36o")
 flat = true
 script = ExtResource("4_duxer")
 
+[node name="Coin 6" type="Button" parent="." unique_id=1031167849]
+offset_left = 504.0
+offset_top = 318.0
+offset_right = 3977.0
+offset_bottom = 2702.0
+scale = Vector2(0.059613984, 0.059903078)
+theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
+icon = ExtResource("2_vs36o")
+flat = true
+script = ExtResource("4_duxer")
+
+[node name="Coin 7" type="Button" parent="." unique_id=1133025165]
+offset_left = 122.0
+offset_top = 239.0
+offset_right = 3595.0
+offset_bottom = 2623.0
+scale = Vector2(0.059613984, 0.059903078)
+theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
+icon = ExtResource("2_vs36o")
+flat = true
+script = ExtResource("4_duxer")
+
+[node name="Coin 8" type="Button" parent="." unique_id=1412161402]
+offset_left = 673.0
+offset_top = 39.000015
+offset_right = 4146.0
+offset_bottom = 2423.0
+scale = Vector2(0.059613984, 0.059903078)
+theme_override_colors/font_outline_color = Color(0.82, 0.82, 0.82, 1)
+icon = ExtResource("2_vs36o")
+flat = true
+script = ExtResource("4_duxer")
+
 [node name="MinigameTimer" parent="." unique_id=2030773464 instance=ExtResource("5_2pc3k")]
 position = Vector2(879, 39)
 
@@ -152,3 +197,6 @@ position = Vector2(879, 39)
 [connection signal="pressed" from="Coin 3" to="Coin 3" method="_on_pressed"]
 [connection signal="pressed" from="Coin 4" to="Coin 4" method="_on_pressed"]
 [connection signal="pressed" from="Coin 5" to="Coin 5" method="_on_pressed"]
+[connection signal="pressed" from="Coin 6" to="Coin 6" method="_on_pressed"]
+[connection signal="pressed" from="Coin 7" to="Coin 7" method="_on_pressed"]
+[connection signal="pressed" from="Coin 8" to="Coin 8" method="_on_pressed"]

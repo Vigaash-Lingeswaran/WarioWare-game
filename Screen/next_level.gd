@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var livecontainer: HBoxContainer = $Live_counter
+@onready var livecontainer: HBoxContainer = $Live_count
 @onready var live: TextureRect = $Live_count/LIVE
 @onready var live2: TextureRect = $Live_count/LIVE2
 @onready var live3: TextureRect = $Live_count/LIVE3
@@ -41,7 +41,8 @@ func _process(delta:float) -> void:
 			livecontainer.hide()
 	timer.text = str(time)
 	level.text = "Level " + str(Global.minigames_done)
-	
+	if Global.lives==0:
+		get_tree().change_scene_to_file("res://Screen/loser_theme.tscn")
 func Timer(start_time: float):
 	
 	time =start_time
@@ -53,6 +54,5 @@ func Timer(start_time: float):
 	
 func wait(seconds:float) -> void:
 	await get_tree().create_timer(seconds).timeout
-			
-			
+						
 	

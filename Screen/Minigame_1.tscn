@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2p26vet30x03" path="res://Screen/MARIO minigame.gd" id="1_705li"]
 [ext_resource type="Texture2D" uid="uid://dq20scwhw5u57" path="res://hqdefault.jpg" id="2_bocgs"]
+[ext_resource type="Texture2D" uid="uid://mv6rvmcabico" path="res://Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (1).png" id="3_bocgs"]
 [ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="3_d4we6"]
 [ext_resource type="Texture2D" uid="uid://coyhfht1tsguv" path="res://cw33weoivly41.png" id="4_u4i7w"]
 [ext_resource type="Texture2D" uid="uid://b5m6xi6ecy0jp" path="res://canva-pixelated-cloud-game-icon-MACiZ8yXnZw.png" id="5_75ab6"]
@@ -82,8 +83,16 @@ offset_bottom = 322.0
 scale = Vector2(2.2122333, 1.995012)
 texture = ExtResource("2_bocgs")
 
+[node name="Collect message" type="TextureRect" parent="BACKGROUND" unique_id=1557566519]
+layout_mode = 0
+offset_top = 152.38004
+offset_right = 1920.0
+offset_bottom = 1232.38
+scale = Vector2(0.058261782, 0.05804553)
+texture = ExtResource("3_bocgs")
+
 [node name="MinigameTimer" parent="BACKGROUND" unique_id=2030773464 instance=ExtResource("3_d4we6")]
-position = Vector2(38.87474, 105.76376)
+position = Vector2(15.8211155, 87.21752)
 scale = Vector2(0.7806584, 0.745229)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=855073802]

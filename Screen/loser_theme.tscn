@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://mkv7k5kpkb4m"]
+
+[ext_resource type="Texture2D" uid="uid://cl6kbfxhjl5e6" path="res://Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (3).png" id="1_ogw6l"]
+[ext_resource type="Texture2D" uid="uid://dls5v88w3n27" path="res://Screen/146805.png" id="2_t1pc4"]
+[ext_resource type="Script" uid="uid://cqt2pievo1uu0" path="res://Screen/loser theme.gd" id="3_ruscl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kv4by"]
+atlas = ExtResource("2_t1pc4")
+region = Rect2(0, 184.95746, 512, 136.1648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vdvy"]
+atlas = ExtResource("2_t1pc4")
+region = Rect2(0, 190.87762, 512, 130.24463)
+
+[node name="LOSER Theme" type="Node2D" unique_id=544495978]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1138419809]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.59981084, 0.5997437)
+texture = ExtResource("1_ogw6l")
+
+[node name="Play again" type="TextureButton" parent="." unique_id=1569535332]
+offset_left = 442.0
+offset_top = 370.0
+offset_right = 954.0001
+offset_bottom = 506.0
+scale = Vector2(0.51464325, 0.55087256)
+texture_normal = SubResource("AtlasTexture_kv4by")
+script = ExtResource("3_ruscl")
+
+[node name="Quit" type="TextureButton" parent="." unique_id=401844906]
+offset_left = 443.00003
+offset_top = 456.0
+offset_right = 955.0001
+offset_bottom = 586.0
+scale = Vector2(0.51464325, 0.55087256)
+texture_normal = SubResource("AtlasTexture_0vdvy")
+script = ExtResource("3_ruscl")
+
+[connection signal="pressed" from="Play again" to="Play again" method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="Play again" method="_on_quit_pressed"]
