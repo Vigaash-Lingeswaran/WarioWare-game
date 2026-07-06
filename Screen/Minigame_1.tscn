@@ -92,8 +92,8 @@ scale = Vector2(0.058261782, 0.05804553)
 texture = ExtResource("3_bocgs")
 
 [node name="MinigameTimer" parent="BACKGROUND" unique_id=2030773464 instance=ExtResource("3_d4we6")]
-position = Vector2(15.8211155, 87.21752)
-scale = Vector2(0.7806584, 0.745229)
+position = Vector2(0, 87.217514)
+scale = Vector2(0.23218064, 0.31963685)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=855073802]
 scroll_offset = Vector2(-71, -50)
