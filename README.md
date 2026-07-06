@@ -23,7 +23,8 @@ Games:
 - Star Collector: Collect all of the 8 stars across the screen
 
 Controls:
-
+- Super Wario: Use the arrow keys (< and >) for moving forward and backward. Use spacebar to jump.
+- Star Collector: Use the mouse to tap the stars!
 
 Credits:
 -Built using the GODOT engine (Windows)
