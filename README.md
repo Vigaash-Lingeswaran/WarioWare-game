@@ -15,7 +15,7 @@ https://vigaash-lingeswaran.itch.io/super-wario-ware
 Features:
 - 2 Minigames
 - Fullscreen settings
-- Game Over and Winner screens along with Play Again buttons
+- Game Over and Winner screens, along with Play Again buttons
 - GIF animations on games and end screen
 
 Games:
@@ -25,6 +25,9 @@ Games:
 Controls:
 - Super Wario: Use the arrow keys (< and >) for moving forward and backward. Use spacebar to jump.
 - Star Collector: Use the mouse to tap the stars!
+
+I still plan to expand this project to include more games, like PONG or Doodle Jump, as well as make the interface a little more polished. 
+
 
 Credits:
 -Built using the GODOT engine (Windows)
