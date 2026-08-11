@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dneorbniddwhu"]
 
-[ext_resource type="Texture2D" uid="uid://bvfm7o2ha3abb" path="res://Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (4).png" id="1_vpttu"]
+[ext_resource type="Texture2D" uid="uid://bvfm7o2ha3abb" path="res://images/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (4).png" id="1_vpttu"]
 [ext_resource type="Texture2D" uid="uid://dls5v88w3n27" path="res://Screen/146805.png" id="2_e21qy"]
 [ext_resource type="Script" uid="uid://dl3d72ej6qb4t" path="res://Screen/back.gd" id="3_vpttu"]
 

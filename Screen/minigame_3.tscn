@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqtsxtsvcd6bk"]
 
 [ext_resource type="Script" uid="uid://dp2d03kshrylc" path="res://Screen/minigame_2.gd" id="1_rqpdm"]
-[ext_resource type="Texture2D" uid="uid://b1ccm5u6ec7x4" path="res://3ZW51.jpeg" id="2_ryiwl"]
+[ext_resource type="Texture2D" uid="uid://b1ccm5u6ec7x4" path="res://images/3ZW51.jpeg" id="2_ryiwl"]
 [ext_resource type="Texture2D" uid="uid://h6dd28trf7m1" path="res://Screen/Mario-Star-PNG-Photo.png" id="3_ckbw5"]
 [ext_resource type="Script" uid="uid://blhkuu36wcpa6" path="res://Screen/coin_1.gd" id="4_qd3s5"]
 [ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="5_ywcir"]

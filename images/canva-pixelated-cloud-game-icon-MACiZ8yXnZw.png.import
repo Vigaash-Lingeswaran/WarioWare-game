@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ccm5u6ec7x4"
-path="res://.godot/imported/3ZW51.jpeg-645a3dee0a5222aa17f42d836add0058.ctex"
+uid="uid://b5m6xi6ecy0jp"
+path="res://.godot/imported/canva-pixelated-cloud-game-icon-MACiZ8yXnZw.png-12a4cf9ccfa0d91bc3805bdf299e8085.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3ZW51.jpeg"
-dest_files=["res://.godot/imported/3ZW51.jpeg-645a3dee0a5222aa17f42d836add0058.ctex"]
+source_file="res://images/canva-pixelated-cloud-game-icon-MACiZ8yXnZw.png"
+dest_files=["res://.godot/imported/canva-pixelated-cloud-game-icon-MACiZ8yXnZw.png-12a4cf9ccfa0d91bc3805bdf299e8085.ctex"]
 
 [params]
 

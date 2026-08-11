@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgvdsn8k8jkcw"
-path="res://.godot/imported/hqdefault (1).jpg-3046953f272e1c92fb4d086045bcc750.ctex"
+uid="uid://bn45big1jbd38"
+path="res://.godot/imported/wario_wallpaper_by_benowar88_d9d5x5d-fullview.png-6b9456ae341bef1270390a73e0008577.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hqdefault (1).jpg"
-dest_files=["res://.godot/imported/hqdefault (1).jpg-3046953f272e1c92fb4d086045bcc750.ctex"]
+source_file="res://images/wario_wallpaper_by_benowar88_d9d5x5d-fullview.png"
+dest_files=["res://.godot/imported/wario_wallpaper_by_benowar88_d9d5x5d-fullview.png-6b9456ae341bef1270390a73e0008577.ctex"]
 
 [params]
 

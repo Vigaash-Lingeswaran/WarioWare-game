@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mv6rvmcabico"
-path="res://.godot/imported/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (1).png-5e9b2fffa5395a4beca3289912541346.ctex"
+uid="uid://djy3n5a7tihmf"
+path="res://.godot/imported/garlic-color.png-19ec0289f7f1c578b5240f8bba7c9854.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (1).png"
-dest_files=["res://.godot/imported/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (1).png-5e9b2fffa5395a4beca3289912541346.ctex"]
+source_file="res://images/garlic-color.png"
+dest_files=["res://.godot/imported/garlic-color.png-19ec0289f7f1c578b5240f8bba7c9854.ctex"]
 
 [params]
 

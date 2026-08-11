@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bv4bnefxpis56"]
 
 [ext_resource type="Script" uid="uid://c4mrb81et6mx6" path="res://Screen/next_level.gd" id="1_j2ojn"]
-[ext_resource type="Texture2D" uid="uid://bn45big1jbd38" path="res://wario_wallpaper_by_benowar88_d9d5x5d-fullview.png" id="1_s6f0y"]
-[ext_resource type="Texture2D" uid="uid://djy3n5a7tihmf" path="res://garlic-color.png" id="2_mwci6"]
+[ext_resource type="Texture2D" uid="uid://bn45big1jbd38" path="res://images/wario_wallpaper_by_benowar88_d9d5x5d-fullview.png" id="1_s6f0y"]
+[ext_resource type="Texture2D" uid="uid://djy3n5a7tihmf" path="res://images/garlic-color.png" id="2_mwci6"]
 [ext_resource type="Script" uid="uid://blm7hwnsqwvle" path="res://Screen/timer.gd" id="4_u88ix"]
 
 [node name="First_Level_scene" type="Node2D" unique_id=1305991898]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq20scwhw5u57"
-path="res://.godot/imported/hqdefault.jpg-3bf8125d7afbaf9d78d7e9d04aa8976a.ctex"
+uid="uid://hvpspy0a36f1"
+path="res://.godot/imported/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (5).png-54f39edb6d573922975bcb6c58245d23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hqdefault.jpg"
-dest_files=["res://.godot/imported/hqdefault.jpg-3bf8125d7afbaf9d78d7e9d04aa8976a.ctex"]
+source_file="res://images/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (5).png"
+dest_files=["res://.godot/imported/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (5).png-54f39edb6d573922975bcb6c58245d23.ctex"]
 
 [params]
 
