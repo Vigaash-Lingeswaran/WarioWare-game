@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mkv7k5kpkb4m"]
 
 [ext_resource type="Texture2D" uid="uid://cl6kbfxhjl5e6" path="res://images/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (3).png" id="1_ogw6l"]
-[ext_resource type="Texture2D" uid="uid://dls5v88w3n27" path="res://Screen/146805.png" id="2_t1pc4"]
+[ext_resource type="Texture2D" uid="uid://dls5v88w3n27" path="res://images/146805.png" id="2_t1pc4"]
 [ext_resource type="Script" uid="uid://cqt2pievo1uu0" path="res://Screen/loser theme.gd" id="3_ruscl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kv4by"]

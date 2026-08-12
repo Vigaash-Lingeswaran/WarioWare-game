@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://8tkh8vcnul0c"]
+[gd_scene format=3 uid="uid://xqix5h0wx5rq"]
 
-[ext_resource type="Script" uid="uid://c2p26vet30x03" path="res://Screen/MARIO minigame.gd" id="1_705li"]
+[ext_resource type="Script" uid="uid://c2p26vet30x03" path="res://Screen/Minigame_1.gd" id="1_705li"]
 [ext_resource type="Texture2D" uid="uid://dq20scwhw5u57" path="res://images/hqdefault.jpg" id="2_bocgs"]
 [ext_resource type="Texture2D" uid="uid://mv6rvmcabico" path="res://images/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (1).png" id="3_bocgs"]
 [ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="3_d4we6"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bgvdsn8k8jkcw" path="res://images/hqdefault (1).jpg" id="6_0i45a"]
 [ext_resource type="PackedScene" uid="uid://caknvmky5u8ws" path="res://Screen/player.tscn" id="7_xmxwo"]
 [ext_resource type="Script" uid="uid://ch2tntfnuiamr" path="res://Screen/coin.gd" id="8_vw47t"]
-[ext_resource type="Texture2D" uid="uid://5uann1ripcyw" path="res://Screen/3716883680234cb.png" id="9_xcbhk"]
+[ext_resource type="Texture2D" uid="uid://5uann1ripcyw" path="res://images/3716883680234cb.png" id="9_xcbhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7lg2"]
 size = Vector2(678.55, 6.3825045)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h6dd28trf7m1"
-path="res://.godot/imported/Mario-Star-PNG-Photo.png-71cc37314316751bbe4faec3e91c7f8d.ctex"
+uid="uid://5uann1ripcyw"
+path="res://.godot/imported/3716883680234cb.png-b9a01383ad8e57ea076a93e0de26ec82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Screen/Mario-Star-PNG-Photo.png"
-dest_files=["res://.godot/imported/Mario-Star-PNG-Photo.png-71cc37314316751bbe4faec3e91c7f8d.ctex"]
+source_file="res://images/3716883680234cb.png"
+dest_files=["res://.godot/imported/3716883680234cb.png-b9a01383ad8e57ea076a93e0de26ec82.ctex"]
 
 [params]
 

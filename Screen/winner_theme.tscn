@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cbmx2fev8uepf"]
 
 [ext_resource type="Texture2D" uid="uid://dcca4uqn8jtuv" path="res://images/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation.png" id="1_um2t3"]
-[ext_resource type="Texture2D" uid="uid://dls5v88w3n27" path="res://Screen/146805.png" id="2_0vdvy"]
+[ext_resource type="Texture2D" uid="uid://dls5v88w3n27" path="res://images/146805.png" id="2_0vdvy"]
 [ext_resource type="Script" uid="uid://tfrhfl6mkpfu" path="res://Screen/texture_button.gd" id="3_kv4by"]
-[ext_resource type="Texture2D" uid="uid://bd4hn86lhio1e" path="res://Screen/ezgif-528c564d2550c225.png" id="4_0vdvy"]
+[ext_resource type="Texture2D" uid="uid://bd4hn86lhio1e" path="res://images/ezgif-528c564d2550c225.png" id="4_0vdvy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kv4by"]
 atlas = ExtResource("4_0vdvy")
@@ -542,7 +542,6 @@ autoplay = "default"
 frame_progress = 0.39646488
 
 [node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="." unique_id=204486307]
-visible = false
 position = Vector2(392, 14.000001)
 scale = Vector2(0.5272925, 0.47709942)
 sprite_frames = SubResource("SpriteFrames_d7lg2")
