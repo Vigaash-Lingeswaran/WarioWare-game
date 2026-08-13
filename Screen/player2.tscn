@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://5r6q7s503nd7"]
+[gd_scene format=3 uid="uid://b1qfs5yvwgqf1"]
 
-[ext_resource type="Script" uid="uid://dqd1c4ukn1smt" path="res://Screen/player2.gd" id="1_fag0d"]
-[ext_resource type="Texture2D" uid="uid://dnh3idwmac0l2" path="res://images/3bc1c2faa4b1d71b83a591fb33f1c60b.png" id="2_w0dci"]
+[ext_resource type="Script" uid="uid://dlnioyhyvllu8" path="res://Screen/player2.gd" id="1_rihsh"]
+[ext_resource type="Texture2D" uid="uid://dnh3idwmac0l2" path="res://images/3bc1c2faa4b1d71b83a591fb33f1c60b.png" id="2_vop8p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d7lg2"]
-radius = 55.7315
+radius = 70.68239
 
-[node name="PLAYER 2" type="Area2D" unique_id=656148388]
-script = ExtResource("1_fag0d")
+[node name="Player" type="Area2D" unique_id=210535669]
+script = ExtResource("1_rihsh")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1569030139]
-scale = Vector2(0.18345341, 0.1771833)
-texture = ExtResource("2_w0dci")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1101717736]
+scale = Vector2(0.22869955, 0.21818182)
+texture = ExtResource("2_vop8p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=228612490]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=4186539]
 shape = SubResource("CircleShape2D_d7lg2")

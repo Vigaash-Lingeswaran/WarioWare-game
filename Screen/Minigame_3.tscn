@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://qhpmor33atpb"]
+
+[ext_resource type="Script" uid="uid://dcqq1s55nmr1o" path="res://Screen/minigame_3.gd" id="1_majsn"]
+[ext_resource type="Texture2D" uid="uid://clfwcu3hqehkx" path="res://images/pixel-art-platformer-game-background-with-grass-field-flowers-clouds_148553-1742.jpg" id="2_jgv11"]
+[ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="3_kleha"]
+[ext_resource type="PackedScene" uid="uid://b1qfs5yvwgqf1" path="res://Screen/player2.tscn" id="4_4llp4"]
+[ext_resource type="PackedScene" uid="uid://bdj8yqk18ti1p" path="res://Screen/garlic_spawner.tscn" id="5_btijk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7lg2"]
+size = Vector2(1140, 94)
+
+[node name="Catcher Minigame" type="Node2D" unique_id=1697755815]
+script = ExtResource("1_majsn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1450228447]
+offset_right = 1149.0
+offset_bottom = 647.0
+texture = ExtResource("2_jgv11")
+
+[node name="MinigameTimer" parent="." unique_id=2030773464 instance=ExtResource("3_kleha")]
+position = Vector2(21, 30)
+
+[node name="Player" parent="." unique_id=210535669 instance=ExtResource("4_4llp4")]
+position = Vector2(48, 476)
+
+[node name="GarlicSpawner" parent="." unique_id=1760923710 instance=ExtResource("5_btijk")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=685456477]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=79849583]
+position = Vector2(569, 597)
+shape = SubResource("RectangleShape2D_d7lg2")
+
+[connection signal="area_entered" from="Player" to="." method="_on_player_area_entered"]

@@ -1,15 +1,40 @@
-[gd_scene format=3 uid="uid://bmbsfdbmnfakd"]
+[gd_scene format=3 uid="uid://vbwds8lnm3um"]
 
-[ext_resource type="Script" uid="uid://c2p26vet30x03" path="res://Screen/Minigame_1.gd" id="1_bocgs"]
-[ext_resource type="Texture2D" uid="uid://dq20scwhw5u57" path="res://images/hqdefault.jpg" id="2_d4we6"]
-[ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="3_d4we6"]
-[ext_resource type="Texture2D" uid="uid://mv6rvmcabico" path="res://images/Blue and Yellow Neon Retro Pixel Art Game Night Game Presentation (1).png" id="3_u4i7w"]
-[ext_resource type="Texture2D" uid="uid://coyhfht1tsguv" path="res://images/cw33weoivly41.png" id="5_75ab6"]
-[ext_resource type="Texture2D" uid="uid://b5m6xi6ecy0jp" path="res://images/canva-pixelated-cloud-game-icon-MACiZ8yXnZw.png" id="6_0i45a"]
-[ext_resource type="Texture2D" uid="uid://bgvdsn8k8jkcw" path="res://images/hqdefault (1).jpg" id="7_xmxwo"]
-[ext_resource type="PackedScene" uid="uid://caknvmky5u8ws" path="res://Screen/player.tscn" id="8_vw47t"]
-[ext_resource type="Script" uid="uid://ch2tntfnuiamr" path="res://Screen/coin.gd" id="9_xcbhk"]
-[ext_resource type="Texture2D" uid="uid://5uann1ripcyw" path="res://images/3716883680234cb.png" id="10_05muh"]
+[ext_resource type="Texture2D" uid="uid://dq20scwhw5u57" path="res://hqdefault.jpg" id="2_b8tye"]
+[ext_resource type="PackedScene" uid="uid://bwqchtktcxvhu" path="res://Screen/minigame_timer.tscn" id="3_hun8f"]
+[ext_resource type="Texture2D" uid="uid://coyhfht1tsguv" path="res://cw33weoivly41.png" id="4_al7iw"]
+[ext_resource type="Texture2D" uid="uid://b5m6xi6ecy0jp" path="res://canva-pixelated-cloud-game-icon-MACiZ8yXnZw.png" id="5_0up7u"]
+[ext_resource type="Texture2D" uid="uid://bgvdsn8k8jkcw" path="res://hqdefault (1).jpg" id="6_7n05b"]
+[ext_resource type="PackedScene" uid="uid://caknvmky5u8ws" path="res://Screen/player.tscn" id="7_s1inc"]
+[ext_resource type="Script" uid="uid://ch2tntfnuiamr" path="res://Screen/coin.gd" id="8_3okua"]
+[ext_resource type="Texture2D" uid="uid://5uann1ripcyw" path="res://Screen/3716883680234cb.png" id="9_kfbj8"]
+
+[sub_resource type="GDScript" id="GDScript_c531g"]
+script/source = "extends Node2D
+
+@onready var themed_timer: Node2D = $BACKGROUND/MinigameTimer
+
+
+var coin_collected = 0
+var timer_end = false
+
+func _ready() ->void:
+	
+	await themed_timer.Timer(10.0)
+	timer_end = true
+
+func _process(delta: float) -> void:
+	if coin_collected ==3:
+		if Global.minigames_done >5:
+			get_tree().change_scene_to_file (\"res://Screen/winner_theme.tscn\")
+			
+		else:
+			get_tree().change_scene_to_file(\"res://Screen/next_level.tscn\")
+
+func coin_collect()-> void:
+	coin_collected = coin_collected +1
+	return
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7lg2"]
 size = Vector2(678.55, 6.3825045)
@@ -74,26 +99,18 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_d7lg2"]
 radius = 727.0079
 
-[node name="MINIGAME 1" type="Node2D" unique_id=161522062]
-script = ExtResource("1_bocgs")
+[node name="MARIO (MINIGAME 1)" type="Node2D" unique_id=161522062]
+script = SubResource("GDScript_c531g")
 
 [node name="BACKGROUND" type="TextureRect" parent="." unique_id=668856410]
 offset_right = 521.0
 offset_bottom = 322.0
 scale = Vector2(2.2122333, 1.995012)
-texture = ExtResource("2_d4we6")
+texture = ExtResource("2_b8tye")
 
-[node name="Collect message" type="TextureRect" parent="BACKGROUND" unique_id=1557566519]
-layout_mode = 0
-offset_top = 152.38004
-offset_right = 1920.0
-offset_bottom = 1232.38
-scale = Vector2(0.058261782, 0.05804553)
-texture = ExtResource("3_u4i7w")
-
-[node name="MinigameTimer" parent="BACKGROUND" unique_id=2030773464 instance=ExtResource("3_d4we6")]
-position = Vector2(38.87474, 104.76127)
-scale = Vector2(0.21102646, 0.25817037)
+[node name="MinigameTimer" parent="BACKGROUND" unique_id=2030773464 instance=ExtResource("3_hun8f")]
+position = Vector2(227.82408, 249.12132)
+scale = Vector2(0.4520319, 0.5012501)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=855073802]
 scroll_offset = Vector2(-71, -50)
@@ -106,7 +123,7 @@ offset_top = 77.0
 offset_right = 533.0
 offset_bottom = 425.0
 scale = Vector2(-0.39272225, 0.32761934)
-texture = ExtResource("5_75ab6")
+texture = ExtResource("4_al7iw")
 
 [node name="TextureRect2" type="TextureRect" parent="Parallax2D" unique_id=1273953647]
 offset_left = 703.0
@@ -114,7 +131,7 @@ offset_top = 72.000015
 offset_right = 1253.0
 offset_bottom = 420.0
 scale = Vector2(-0.5043151, 0.2617154)
-texture = ExtResource("6_0i45a")
+texture = ExtResource("5_0up7u")
 
 [node name="TextureRect3" type="TextureRect" parent="Parallax2D" unique_id=917178549]
 offset_left = 1145.0
@@ -122,7 +139,7 @@ offset_top = 145.0
 offset_right = 1695.0
 offset_bottom = 493.0
 scale = Vector2(-0.40148732, 0.20765704)
-texture = ExtResource("6_0i45a")
+texture = ExtResource("5_0up7u")
 
 [node name="Platform 1" type="StaticBody2D" parent="." unique_id=1166513598]
 
@@ -132,7 +149,7 @@ offset_top = 556.0
 offset_right = 40.0
 offset_bottom = 596.0
 scale = Vector2(2.4010677, 2.1982684)
-texture = ExtResource("7_xmxwo")
+texture = ExtResource("6_7n05b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 1" unique_id=810409557]
 position = Vector2(575, 601.5)
@@ -147,7 +164,7 @@ offset_top = 431.00003
 offset_right = 771.0
 offset_bottom = 471.00003
 scale = Vector2(1.6195949, 1.2622172)
-texture = ExtResource("7_xmxwo")
+texture = ExtResource("6_7n05b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 2" unique_id=186656264]
 position = Vector2(682.5, 457.5)
@@ -162,7 +179,7 @@ offset_top = 268.00003
 offset_right = 1077.0
 offset_bottom = 308.00003
 scale = Vector2(1.1548266, 1.2196451)
-texture = ExtResource("7_xmxwo")
+texture = ExtResource("6_7n05b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 3" unique_id=1824500178]
 position = Vector2(872.50006, 292.875)
@@ -178,7 +195,7 @@ offset_top = 267.00003
 offset_right = 862.00006
 offset_bottom = 307.00003
 scale = Vector2(0.65598303, 0.95231366)
-texture = ExtResource("7_xmxwo")
+texture = ExtResource("6_7n05b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 4" unique_id=449462545]
 position = Vector2(544.5, 287.5)
@@ -195,7 +212,7 @@ offset_right = 1459.0
 offset_bottom = 439.0
 rotation = -1.5707964
 scale = Vector2(0.06114437, 0.2975986)
-texture = ExtResource("7_xmxwo")
+texture = ExtResource("6_7n05b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 5" unique_id=218512631]
 position = Vector2(985.5, 384.5)
@@ -216,11 +233,11 @@ rotation = -1.5707964
 scale = Vector2(1.0300536, 0.65502834)
 shape = SubResource("RectangleShape2D_a2378")
 
-[node name="PLAYER" parent="." unique_id=622741999 instance=ExtResource("8_vw47t")]
+[node name="PLAYER" parent="." unique_id=622741999 instance=ExtResource("7_s1inc")]
 position = Vector2(86, 499)
 
 [node name="Coin" type="Node2D" parent="." unique_id=839937158]
-script = ExtResource("9_xcbhk")
+script = ExtResource("8_3okua")
 
 [node name="Coin" type="TextureRect" parent="Coin" unique_id=262460666]
 offset_left = 1088.0
@@ -228,7 +245,7 @@ offset_top = 499.0
 offset_right = 2276.0
 offset_bottom = 1687.0
 scale = Vector2(0.048165064, 0.044986345)
-texture = ExtResource("10_05muh")
+texture = ExtResource("9_kfbj8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Coin" unique_id=1134716480]
 root_node = NodePath("../Coin")
@@ -245,7 +262,7 @@ shape = SubResource("CircleShape2D_d7lg2")
 
 [node name="Coin2" type="Node2D" parent="." unique_id=837590492]
 position = Vector2(-71, -288)
-script = ExtResource("9_xcbhk")
+script = ExtResource("8_3okua")
 
 [node name="Coin" type="TextureRect" parent="Coin2" unique_id=1031043181]
 offset_left = 1088.0
@@ -253,7 +270,7 @@ offset_top = 499.0
 offset_right = 2276.0
 offset_bottom = 1687.0
 scale = Vector2(0.048165064, 0.044986345)
-texture = ExtResource("10_05muh")
+texture = ExtResource("9_kfbj8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Coin2" unique_id=810499620]
 root_node = NodePath("../Coin")
@@ -270,7 +287,7 @@ shape = SubResource("CircleShape2D_d7lg2")
 
 [node name="Coin3" type="Node2D" parent="." unique_id=386114230]
 position = Vector2(-900, -424)
-script = ExtResource("9_xcbhk")
+script = ExtResource("8_3okua")
 
 [node name="Coin" type="TextureRect" parent="Coin3" unique_id=48339322]
 offset_left = 1088.0
@@ -278,12 +295,11 @@ offset_top = 499.0
 offset_right = 2276.0
 offset_bottom = 1687.0
 scale = Vector2(0.048165064, 0.044986345)
-texture = ExtResource("10_05muh")
+texture = ExtResource("9_kfbj8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Coin3" unique_id=930572817]
 root_node = NodePath("../Coin")
 libraries/ = SubResource("AnimationLibrary_s0dnv")
-autoplay = &"RESET"
 
 [node name="Area2D" type="Area2D" parent="Coin3" unique_id=112209797]
 position = Vector2(1088, 497.03552)
@@ -295,5 +311,4 @@ shape = SubResource("CircleShape2D_d7lg2")
 
 [connection signal="coin_collected" from="Coin" to="." method="coin_collect"]
 [connection signal="coin_collected" from="Coin2" to="." method="_on_coin_2_coin_collected"]
-[connection signal="coin_collected" from="Coin2" to="." method="coin_collect"]
 [connection signal="coin_collected" from="Coin3" to="." method="coin_collect"]

@@ -1,18 +1,21 @@
 extends Area2D
 
 @export var speed: float = 500.0
-var score: int = 0
+var screen_size: Vector2
 
 func _ready() -> void:
-	area_entered.connect(_on_area_entered)
-	
+	screen_size = get_viewport_rect().size
+	# Start the player near the bottom center of the screen
+	position = Vector2(screen_size.x / 2, screen_size.y -170)
+
 func _process(delta: float) -> void:
-	var direction = Input.get_axis("ui_left", "ui_right")
-	position.x += direction *speed *delta
-	position.x = clamp (position.x, 50.0, 1100.0)
+	var velocity = Vector2.ZERO
 	
-func _on_area_entered(area: Area2D) -> void:
-	if area.has_method("caught"):
-		area.caught()
-		score +=1
-		print("Score: ", score)
+	# Check for horizontal keyboard input
+	if Input.is_action_pressed("ui_left"):
+		velocity.x -= 1
+	if Input.is_action_pressed("ui_right"):
+		velocity.x += 1
+		
+	# Move and clamp the player inside the visible screen boundaries
+	position += velocity.normalized() * speed * delta
