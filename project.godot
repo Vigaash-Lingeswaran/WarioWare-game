@@ -27,6 +27,10 @@ window/stretch/mode="viewport"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[gui]
+
+theme/custom_font="uid://64rct536e0ks"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

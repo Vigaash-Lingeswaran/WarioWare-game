@@ -92,7 +92,7 @@ scale = Vector2(0.058261782, 0.05804553)
 texture = ExtResource("3_u4i7w")
 
 [node name="MinigameTimer" parent="BACKGROUND" unique_id=2030773464 instance=ExtResource("3_d4we6")]
-position = Vector2(38.87474, 104.76127)
+position = Vector2(32.99833, 106.26502)
 scale = Vector2(0.21102646, 0.25817037)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=855073802]

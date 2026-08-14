@@ -87,12 +87,12 @@ texture = ExtResource("2_t2say")
 expand_mode = 1
 
 [node name="TextEdit" type="Label" parent="." unique_id=714393343]
-offset_left = 879.0
-offset_top = 143.0
-offset_right = 1402.0
-offset_bottom = 239.0
+offset_left = 826.0
+offset_top = 182.00002
+offset_right = 1590.0
+offset_bottom = 284.0
 scale = Vector2(0.46068966, 0.6916076)
-theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.3162401, 0.18759999, 0.67, 1)
 theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 70
