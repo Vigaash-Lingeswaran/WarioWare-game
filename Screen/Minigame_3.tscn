@@ -17,6 +17,45 @@ offset_right = 1149.0
 offset_bottom = 647.0
 texture = ExtResource("2_jgv11")
 
+[node name="TextEdit" type="Label" parent="." unique_id=1119704948]
+offset_left = 21.0
+offset_top = 194.0
+offset_right = 785.0
+offset_bottom = 296.0
+scale = Vector2(0.2144311, 0.2892393)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.3162401, 0.18759999, 0.67, 1)
+theme_override_constants/outline_size = 70
+theme_override_font_sizes/font_size = 170
+text = "CATCH 10 
+GARLICS!"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="." unique_id=1310466230]
+offset_left = 902.00006
+offset_top = 30.0
+offset_right = 1899.0001
+offset_bottom = 467.0
+scale = Vector2(0.2144311, 0.2892393)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.3162401, 0.18759999, 0.67, 1)
+theme_override_constants/outline_size = 70
+theme_override_font_sizes/font_size = 170
+horizontal_alignment = 1
+
+[node name="Score2" type="Label" parent="." unique_id=1457173362]
+offset_left = 796.0
+offset_top = 30.0
+offset_right = 1793.0
+offset_bottom = 467.0
+scale = Vector2(0.2144311, 0.2892393)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.3162401, 0.18759999, 0.67, 1)
+theme_override_constants/outline_size = 70
+theme_override_font_sizes/font_size = 170
+text = "Score = "
+horizontal_alignment = 1
+
 [node name="MinigameTimer" parent="." unique_id=2030773464 instance=ExtResource("3_kleha")]
 position = Vector2(21, 30)
 

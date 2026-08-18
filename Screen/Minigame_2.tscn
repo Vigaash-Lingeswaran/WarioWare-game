@@ -87,16 +87,18 @@ texture = ExtResource("2_t2say")
 expand_mode = 1
 
 [node name="TextEdit" type="Label" parent="." unique_id=714393343]
-offset_left = 826.0
-offset_top = 182.00002
-offset_right = 1590.0
-offset_bottom = 284.0
+offset_left = 848.0
+offset_top = 123.00003
+offset_right = 1612.0
+offset_bottom = 306.00003
 scale = Vector2(0.46068966, 0.6916076)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.3162401, 0.18759999, 0.67, 1)
 theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 70
-text = "TAP THE STARS!"
+text = "TAP THE 
+STARS!"
+horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1517745195]
 libraries/ = SubResource("AnimationLibrary_5heya")

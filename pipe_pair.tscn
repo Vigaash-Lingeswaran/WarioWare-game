@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://ccdoo736nnaay"]
+
+[ext_resource type="Script" uid="uid://d10e4fnokqrhv" path="res://pipe_pair.gd" id="1_bmsf8"]
+[ext_resource type="Texture2D" uid="uid://ccyu5cb686ukw" path="res://images/top.png" id="1_nep78"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rm4ur"]
+size = Vector2(39, 155.967)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjc4y"]
+size = Vector2(88, 120)
+
+[node name="ObstaclePair" type="Area2D" unique_id=2125317723]
+position = Vector2(27, 222)
+script = ExtResource("1_bmsf8")
+
+[node name="Top Pipe2" type="Sprite2D" parent="." unique_id=1835363207]
+position = Vector2(-6.323719, -331.3523)
+scale = Vector2(0.45352522, 0.5268458)
+texture = ExtResource("1_nep78")
+region_enabled = true
+region_rect = Rect2(0, 0, 100, 458.21805)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=100619785]
+position = Vector2(-6.823719, -336.4866)
+rotation = -3.1415925
+scale = Vector2(1.0937961, 1.6485175)
+shape = SubResource("RectangleShape2D_rm4ur")
+
+[node name="Top Pipe" type="Sprite2D" parent="." unique_id=1655171294]
+position = Vector2(-6.177244, -90.80852)
+scale = Vector2(0.45352522, 0.5268458)
+texture = ExtResource("1_nep78")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1048225803]
+position = Vector2(-6.677244, -93.44284)
+rotation = -3.1415925
+scale = Vector2(1.0937961, 1.6485175)
+shape = SubResource("RectangleShape2D_rm4ur")
+
+[node name="Bottom Pipe2" type="Sprite2D" parent="." unique_id=1470223912]
+position = Vector2(-7.2634277, 532.7218)
+rotation = 3.1411347
+scale = Vector2(0.45352525, 0.5268458)
+texture = ExtResource("1_nep78")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=923840743]
+position = Vector2(-7.7634277, 533.2218)
+scale = Vector2(1.0937961, 1.6485175)
+shape = SubResource("RectangleShape2D_rm4ur")
+
+[node name="Bottom Pipe" type="Sprite2D" parent="." unique_id=245707388]
+position = Vector2(-6.1772423, 293.19147)
+rotation = 3.1411347
+scale = Vector2(0.45352525, 0.5268458)
+texture = ExtResource("1_nep78")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1654998816]
+position = Vector2(-6.6772423, 293.69147)
+scale = Vector2(1.0937961, 1.6485175)
+shape = SubResource("RectangleShape2D_rm4ur")
+
+[node name="ScoreDetector" type="Area2D" parent="." unique_id=2098731738]
+position = Vector2(17, 39)
+scale = Vector2(1.0921639, 1.0040362)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreDetector" unique_id=1650660706]
+position = Vector2(0, 63)
+shape = SubResource("RectangleShape2D_pjc4y")
+
+[connection signal="area_entered" from="." to="." method="_on_body_entered"]

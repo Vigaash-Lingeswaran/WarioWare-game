@@ -4,6 +4,8 @@ extends Node
 
 
 var score: int = 0
+@onready var scores: Label = $Score
+ 
 
 
 func _on_player_area_entered(area: Area2D) -> void:
@@ -18,6 +20,7 @@ func _ready() -> void:
 	timer_end = true
 	
 func _process(delta: float) -> void:
+	scores.text = str(score)
 	if score ==10:
 		if Global.minigames_done>2:
 			get_tree().change_scene_to_file("res://Screen/winner_theme.tscn")
