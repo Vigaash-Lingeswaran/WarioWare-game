@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dssrs1u2ufc2q"]
 
-[ext_resource type="Script" uid="uid://da10uslyynj4a" path="res://test.gd" id="1_37kl0"]
+[ext_resource type="Script" uid="uid://da10uslyynj4a" path="res://Screen/test.gd" id="1_37kl0"]
 
 [node name="Node2D" type="Node2D" unique_id=546292839]
 script = ExtResource("1_37kl0")

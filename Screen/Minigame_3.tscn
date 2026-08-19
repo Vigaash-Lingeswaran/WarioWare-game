@@ -9,6 +9,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7lg2"]
 size = Vector2(1140, 94)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rm4ur"]
+size = Vector2(366, 20)
+
 [node name="Catcher Minigame" type="Node2D" unique_id=1697755815]
 script = ExtResource("1_majsn")
 
@@ -56,6 +59,8 @@ theme_override_font_sizes/font_size = 170
 text = "Score = "
 horizontal_alignment = 1
 
+[node name="Node" type="Node" parent="Score2" unique_id=1815461973]
+
 [node name="MinigameTimer" parent="." unique_id=2030773464 instance=ExtResource("3_kleha")]
 position = Vector2(21, 30)
 
@@ -69,5 +74,11 @@ position = Vector2(48, 476)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=79849583]
 position = Vector2(569, 597)
 shape = SubResource("RectangleShape2D_d7lg2")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1550370022]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1812058754]
+position = Vector2(173, 0)
+shape = SubResource("RectangleShape2D_rm4ur")
 
 [connection signal="area_entered" from="Player" to="." method="_on_player_area_entered"]

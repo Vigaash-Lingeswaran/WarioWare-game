@@ -22,7 +22,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	scores.text = str(score)
 	if score ==10:
-		if Global.minigames_done>2:
+		if Global.minigames_done>3:
 			get_tree().change_scene_to_file("res://Screen/winner_theme.tscn")
 		
 		else:

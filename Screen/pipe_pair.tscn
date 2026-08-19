@@ -1,16 +1,15 @@
 [gd_scene format=3 uid="uid://ccdoo736nnaay"]
 
-[ext_resource type="Script" uid="uid://d10e4fnokqrhv" path="res://pipe_pair.gd" id="1_bmsf8"]
+[ext_resource type="Script" uid="uid://d10e4fnokqrhv" path="res://Screen/pipe_pair.gd" id="1_bmsf8"]
 [ext_resource type="Texture2D" uid="uid://ccyu5cb686ukw" path="res://images/top.png" id="1_nep78"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rm4ur"]
-size = Vector2(39, 155.967)
+size = Vector2(39, 148.05458)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjc4y"]
 size = Vector2(88, 120)
 
 [node name="ObstaclePair" type="Area2D" unique_id=2125317723]
-position = Vector2(27, 222)
 script = ExtResource("1_bmsf8")
 
 [node name="Top Pipe2" type="Sprite2D" parent="." unique_id=1835363207]
@@ -21,7 +20,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 100, 458.21805)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=100619785]
-position = Vector2(-6.823719, -336.4866)
+position = Vector2(-6.823721, -329.96472)
 rotation = -3.1415925
 scale = Vector2(1.0937961, 1.6485175)
 shape = SubResource("RectangleShape2D_rm4ur")
@@ -67,4 +66,4 @@ scale = Vector2(1.0921639, 1.0040362)
 position = Vector2(0, 63)
 shape = SubResource("RectangleShape2D_pjc4y")
 
-[connection signal="area_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

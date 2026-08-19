@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://7rjqregcdjpu"]
 
-[ext_resource type="Script" uid="uid://cuwnkaf6eelbr" path="res://flappy_player.gd" id="1_vi0mo"]
+[ext_resource type="Script" uid="uid://cuwnkaf6eelbr" path="res://Screen/flappy_player.gd" id="1_vi0mo"]
 [ext_resource type="Texture2D" uid="uid://coyhfht1tsguv" path="res://images/cw33weoivly41.png" id="2_4wtkq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vrunk"]
-radius = 0.074574225
-height = 1.0135697
+radius = 0.055497095
+height = 0.6757132
 
 [node name="Flappy Player" type="CharacterBody2D" unique_id=250603008]
 script = ExtResource("1_vi0mo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886438377]
-scale = Vector2(-0.38602942, 0.3401876)
+position = Vector2(-2, -3.000002)
+scale = Vector2(-0.26459846, 0.25127444)
 texture = ExtResource("2_4wtkq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1308743780]
